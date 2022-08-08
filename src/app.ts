@@ -18,13 +18,15 @@ async function main() {
   //   description: "House in the beach big beautiful",
   // });
 
-  const booking = await bookingController.create({
-    startDate: new Date(),
-    endDate: new Date("2022-10-30"),
-    houseId: "e56ab4b1-97fd-43dc-8087-1121b1e4839b",
-    userId: "411318f2-7da5-4b2a-a5b6-6f5872759544",
-  });
-  console.log(booking);
+  // const booking = await bookingController.create({
+  //   startDate: new Date(),
+  //   endDate: new Date("2022-10-30"),
+  //   houseId: "e56ab4b1-97fd-43dc-8087-1121b1e4839b",
+  //   userId: "411318f2-7da5-4b2a-a5b6-6f5872759544",
+  // });
+
+  const bookings = await bookingController.findAll();
+  console.log(bookings);
 }
 
 main();

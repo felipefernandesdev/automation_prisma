@@ -33,7 +33,7 @@ model Booking {
   id        String   @id @default(uuid())
   startDate DateTime @db.Timestamp()
   endDate   DateTime @db.Timestamp()
-  User      User?    @relation(fields: [userId], references: [id])
+  user      User?    @relation(fields: [userId], references: [id])
   userId    String?
   house     House?   @relation(fields: [houseId], references: [id])
   houseId   String?
